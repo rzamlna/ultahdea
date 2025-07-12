@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Selamat Ulang Tahun Dea 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(to bottom right, #ffe0f0, #cce7ff);
+      color: #444;
+      text-align: center;
+    }
+
+    .container {
+      padding: 50px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #e91e63;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .gallery img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #surprise {
+      display: none;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #d81b60;
+      font-weight: bold;
+    }
+
+    .confetti {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Selamat Ulang Tahun, Dea! 🎉</h1>
+    <p>
+      Hari ini, 5 September 2006, lahirlah seseorang yang sangat berarti dalam hidupku.<br><br>
+      Terima kasih telah hadir dan menjadi cahaya dalam hari-hariku. Kamu bukan hanya pacarku, tapi juga sahabat terbaik dan belahan jiwaku. Aku bersyukur setiap hari karena kamu.<br><br>
+      Semoga semua impianmu tercapai, dan semoga cinta kita terus tumbuh, hari demi hari. Aku cinta kamu, Dea. 💖
+    </p>
+
+    <!-- Galeri Foto (Placeholder) -->
+    <div class="gallery">
+      <!-- Ganti 'foto1.jpg' dengan nama file asli -->
+      <img src="foto1.jpg" alt="Foto 1">
+      <img src="foto2.jpg" alt="Foto 2">
+      <img src="foto3.jpg" alt="Foto 3">
+      <img src="foto4.jpg" alt="Foto 4">
+      <img src="foto5.jpg" alt="Foto 5">
+      <img src="foto6.jpg" alt="Foto 6">
+      <img src="foto7.jpg" alt="Foto 7">
+      <img src="foto8.jpg" alt="Foto 8">
+      <img src="foto9.jpg" alt="Foto 9">
+      <img src="foto10.jpg" alt="Foto 10">
+    </div>
+
+    <!-- Tombol Kejutan -->
+    <button onclick="tampilkanSurprise()">Klik untuk Pesan Rahasia 🎁</button>
+    <div id="surprise">
+      Kamu adalah alasanku tersenyum setiap hari. Malam ini, ada kejutan spesial buat kamu. Tunggu ya, sayang. 😘
+    </div>
+  </div>
+
+  <!-- Musik Latar -->
+  <iframe width="0" height="0" src="https://www.youtube.com/embed/QqJ-Vp8mvbk?autoplay=1&loop=1&playlist=QqJ-Vp8mvbk" frameborder="0" allow="autoplay" allowfullscreen style="display:none;"></iframe>
+
+  <!-- Efek Confetti -->
+  <canvas class="confetti"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+    function tampilkanSurprise() {
+      document.getElementById('surprise').style.display = 'block';
+      confetti({
+        particleCount: 150,
+        spread: 100,
+        origin: { y: 0.6 }
+      });
+    }
+  </script>
+
+</body>
+</html>
